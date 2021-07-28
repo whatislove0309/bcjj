@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.min.css">
+    <script src="https://kit.fontawesome.com/34b00d3407.js" crossorigin="anonymous"></script>
     
     <!-- Useful meta tags -->
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -65,13 +66,33 @@
                         </nav>
                     </div>
         
-                    <div class="col-auto header_account">
-                            <a href="#"><img src="assets/images/person.png" alt=""></a>
-                            <ul class="header_account_ul">
-                                <a href="#"><li class="header_account_li">Профиль</li></a> 
-                                <a href="account.html"><li class="header_account_li">Кабинет</li></a>
-                                <a href="settings.html"><li class="header_account_li">Настройки</li></a>
-                                <a href="#"><li class="header_account_li">Выйти</li></a>
+                    <div class="col-auto header_user">
+                            <a href="#"><i class="fa fa-user-circle header_account_icon" aria-hidden="true"></i></a>
+                            <ul class="header_user_ul">
+                                <a href="profile.html">
+                                    <li class="header_user_li">
+                                        <i class="fa fa-user-circle header_user_list_icon" aria-hidden="true"></i> 
+                                        Профиль
+                                    </li>
+                                </a> 
+                                <a href="account.html">
+                                    <li class="header_user_li">
+                                        <i class="fa fa-user-o header_user_list_icon" aria-hidden="true"></i> 
+                                        Кабинет
+                                    </li>
+                                </a>
+                                <a href="settings.html">
+                                    <li class="header_user_li">
+                                        <i class="fa fa-cog header_user_list_icon" aria-hidden="true"></i>
+                                        Настройки
+                                    </li>
+                                </a>
+                                <a href="#">
+                                    <li class="header_user_li">
+                                        <i class="fa fa-sign-out header_user_list_icon" aria-hidden="true"></i> 
+                                        Выйти
+                                    </li>
+                                </a>
                             </ul>
                     </div>
         
@@ -123,8 +144,8 @@
                     <div class="row justify-content-between" style="align-items: center;">
                         <h3 class="col-auto settings_title">Настройки аккаунта</h3>
                         <div class="col-auto" style="margin: 10px 0;">
-                            <button class="bttn bttn-blue">Поделиться</button>
-                            <button class="bttn bttn-blue">Мой профиль</button>
+                            <a href="#" class="bttn bttn-blue">Поделиться</a>
+                            <a href="account.html" class="bttn bttn-blue">Мой профиль</a>
                         </div>
                     </div>
                     <br>
@@ -236,7 +257,7 @@
                                 <div class="light panel_body">
                                     <ul class="light panel_list">
                                         <li class="light panel_row">
-                                            <button class="bttn bttn-red">Удалить</button>
+                                            <a href="#" class="bttn bttn-red">Удалить</a>
                                         </li>    
                                     </ul>
                                 </div>
@@ -304,7 +325,7 @@
                 <br>
                 <div class="row justify-content-center">
                     <div class="col-auto">
-                        <button class="bttn bttn-green" style="min-width: 20%;">Сохранить</button>
+                        <a href="#" class="bttn bttn-green" style="min-width: 20%;">Сохранить</a>
                     </div>
                 </div>
                 
