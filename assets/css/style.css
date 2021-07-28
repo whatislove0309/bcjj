@@ -375,13 +375,13 @@ button, button:hover, button:focus {
 }
 
 .bttn {
-    padding: 0.5rem 1rem;
+    padding: 0.7rem 1rem;
     border: 1px solid #fff;
-    height: 2.5rem;
     border-radius: 3px;
     color: #fff;
     font-weight: 300;
     font-size: 0.93rem;
+    line-height: normal;
     background-color: transparent;
     transition: all 0.1s linear;
 }
@@ -459,6 +459,62 @@ input {
     color: #555;
     font-weight: 300;
     padding: 7px;
+}
+
+.selector_outer {
+    padding: 32px 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.selector_inner {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.selector {
+    width: 50%;
+    height: 48px;
+    text-align: center;
+    border: 2px solid #fff;
+    cursor: pointer;
+    transition: all 0.1s linear;
+}
+
+.selector:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.selector.active {
+    background-color: #fff;
+}
+
+.selector.active a {
+    color: #202838;
+}
+
+.selector.active:hover {
+    background-color: #fff;
+}
+
+.selector a {
+    width: 100%;
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-weight: 300;
 }
 
 .panel_item {
@@ -797,7 +853,7 @@ input {
     justify-content: flex-start;
 }
 
-.head_buttons button:first-child {
+.head_buttons .bttn:first-child {
     margin-right: 5px;
 }
 
@@ -859,7 +915,7 @@ input {
     font-weight: 100;
 }
 
-.header_account {
+.header_user {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
@@ -872,12 +928,16 @@ input {
     position: relative;
 }
 
-.header_account img {
-    width: 25px;
-    height: auto;
+.header_account_icon {
+    font-size: 30px;
 }
 
-.header_account_ul {
+.header_user_list_icon {
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+.header_user_ul {
     position: absolute;
     z-index: 1;
     top: 99%;
@@ -890,19 +950,25 @@ input {
     display: none;
 }
 
-.header_account_li {
+.header_user_li {
     font-size: 0.9rem;
     font-weight: 100;
     padding: 15px 20px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -ms-flex-align: center;
+    align-items: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.header_account_li:hover {
+.header_user_li:hover {
     background-color: rgba(32, 40, 56, 0.9);
 }
 
-.header_account:hover .header_account_ul {
+.header_user:hover .header_user_ul {
     display: block;
 }
 
@@ -1228,62 +1294,12 @@ input {
     margin: 3.1rem 0;
 }
 
-.selector {
-    padding: 32px 0;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-
-.selector_inner {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-
-.event_selector {
-    width: 50%;
-    height: 48px;
-    text-align: center;
-    border: 2px solid #fff;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.1s linear;
-}
-
-.event_selector:hover {
-    background-color: rgba(255, 255, 255, 0.15);
-}
-
-.event_selector.active {
-    background-color: #fff;
-}
-
-.event_selector.active a {
-    color: #202838;
-}
-
-.event_selector.active:hover {
-    background-color: #fff;
-}
-
-.event_selector:first-child {
+.selector:first-child {
     border-bottom-left-radius: 5px;
     border-top-left-radius: 5px;
 }
 
-.event_selector:last-child {
+.selector:last-child {
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
     border-left: 1px solid #fff;
@@ -1676,6 +1692,70 @@ input {
     width: 47%;
     border: none;
     margin-bottom: 0;
+}
+
+.account_switch .fa {
+    margin-right: 8px;
+}
+
+.account_title {
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.hero {
+    padding: 64px 0;
+    background-image: url(/assets/images/bg.jpg);
+    background-position: center;
+}
+
+.profile {
+    padding: 128px 0 0 0;
+}
+
+.profile_name, .profile_info {
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.profile_name img {
+    max-width: 70px;
+    width: 100%;
+    height: auto;
+    margin-right: 20px;
+}
+
+.profile_name h6 {
+    font-size: 4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.profile_info span,
+.profile_info a {
+    margin: 0 10px;
+}
+
+.profile_info a {
+    padding: 0.1rem 1rem;
+    color: #7e818c;
+    border-color: #7e818c;
+}
+
+.profile_info span {
+    font-size: 18px;
+    font-weight: 300;
+    color: #7e818c;
+    text-transform: uppercase;
+}
+
+.profile_info span b {
+    color: #fff;
+    font-weight: 600;
 }
 
 html {

@@ -14,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="description" content="">
     
-    <title>smoothcomp registration</title>
+    <title>smoothcomp account</title>
 </head>
 <body>
 
@@ -52,10 +52,9 @@
                                     <a href="#" class="head_nav_a">Подробнее</a>
                                     <ul class="sub_nav_ul">
                                         <li class="sub_nav_li"><a href="#" class="sub_nav_a">Команда</a></li>
-                                        <li class="sub_nav_li"><a href="#" class="sub_nav_a">О проекте</a></li>
+                                        <li class="sub_nav_li"><a href="#" class="sub_nav_a">О компании</a></li>
                                     </ul>
                                 </li>
-        
                                 <li class="head_nav_li head_nav_li-sup">
                                     <a href="#" class="head_nav_a"><img class="lang_icon" src="assets/images/flag.png" alt=""></a>
                                     <ul class="sub_nav_ul">
@@ -67,14 +66,37 @@
                         </nav>
                     </div>
         
-                    <div class="col-auto ">
-                        <div class="head_buttons">
-                            <a href="log.html" class="bttn bttn-blue">Вход</a>
-                            <a href="reg.html" class="bttn bttn-gray">Создать аккаунт</a>
-                        </div>
+                    <div class="col-auto header_user">
+                            <a href="#"><i class="fa fa-user-circle header_account_icon" aria-hidden="true"></i></a>
+                            <ul class="header_user_ul">
+                                <a href="profile.html">
+                                    <li class="header_user_li">
+                                        <i class="fa fa-user-circle header_user_list_icon" aria-hidden="true"></i> 
+                                        Профиль
+                                    </li>
+                                </a> 
+                                <a href="account.html">
+                                    <li class="header_user_li">
+                                        <i class="fa fa-user-o header_user_list_icon" aria-hidden="true"></i> 
+                                        Кабинет
+                                    </li>
+                                </a>
+                                <a href="settings.html">
+                                    <li class="header_user_li">
+                                        <i class="fa fa-cog header_user_list_icon" aria-hidden="true"></i>
+                                        Настройки
+                                    </li>
+                                </a>
+                                <a href="log.html">
+                                    <li class="header_user_li">
+                                        <i class="fa fa-sign-out header_user_list_icon" aria-hidden="true"></i> 
+                                        Выйти
+                                    </li>
+                                </a>
+                            </ul>
                     </div>
         
-                    <div class="col-auto align-self-end d-lg-none d-xl-none d-block col-sm-2 header_nav_collapse">
+                    <div class="col-auto d-lg-none d-xl-none d-block header_nav_collapse">
         
                         <div class="nav_collapse_icon">
                             <img src="assets/images/nav_icon.png" alt="" id="burger_button">
@@ -111,66 +133,93 @@
         
                     </div>
                 </div>
-            </div>
+            </div> 
         
         </header>
-
         <div class="main">
 
             
-            <section class="selector_outer">
+            <section class="create_event">
                 <div class="container">
+                    <br>
+                    <br>
                     <div class="row justify-content-center">
-                        <div class="col-sm-6">
-                            <ul class="selector_inner">
-                                <li class="selector"><a href="log.html">Войти</a></li>
-                                <li class="selector active"><a href="reg.html">Создать аккаунт</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                </div>
-            </section>
+                        <div class="col-md-7">
             
-            <section class="auth">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-sm-6 auth_outer">
-                            <div class="log_form">
-                                <div class="reg_name">
-                                    <div>
-                                        <label for="name">Имя</label>
-                                        <input type="text" class="event_search" id="name">
+                            <div class="light panel_item">
+                                <div class="light panel_item">
+                                    <div class="light panel_header">
+                                        <h4 class="light panel_title">Создать событие</h4>
                                     </div>
-                                    <div>
-                                        <label for="surname">Фамилия</label>
-                                        <input type="text" class="event_search" id="surname">
+                                    <div class="light panel_body">
+                                        <ul class="light panel_list">
+                                            <li class="light panel_row">
+                                                <label>Название:</label>
+                                                <input type="text" id="event_name">
+                                            </li>
+                                            <!-------------------->
+                                            <li class="light panel_row">
+                                                <label>Страна проведения:</label>
+                                                <select class="form-control select">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                </select>
+                                            </li>
+                                            <!-------------------->
+                                            <li class="light panel_row">
+                                                <label>Город проведения:</label>
+                                                <select class="form-control select">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                </select>
+                                            </li>
+                                            <!-------------------->          
+                                            <li class="light panel_row">
+                                                <label>Даты проведения:</label>
+                                                <input style="margin: 5px 0; margin-right: 5px;" type="date" id="start_date">
+                                                <input type="date" id="end_date">
+                                            </li>
+                                            <!-------------------->
+                                            <li class="light panel_row">
+                                                <label>Дата ранней регистрации:</label>
+                                                <input style="margin: 5px 0; margin-right: 5px;" type="date" id="prereg_start_date">
+                                                <input type="date" id="prereg_end_date">
+                                            </li>
+                                            <!-------------------->         
+                                            <li class="light panel_row">
+                                                <label>Дата регистрации:</label>
+                                                <input style="margin: 5px 0; margin-right: 5px;" type="date" id="reg_start_date">
+                                                <input type="date" id="reg_end_date">
+                                            </li>
+                                            <!-------------------->
+                                            <li class="light panel_row">
+                                                <label>Описание</label>
+                                                <textarea name="event_descr" id="event_descr"></textarea>
+                                            </li>
+                                            <!-------------------->
+                                        </ul>
                                     </div>
                                 </div>
-                                <div class="reg_email">
-                                    <label for="name">Почта</label>
-                                    <input type="text" class="event_search" id="email">
-                                    <label for="surname">Подтверждение почты</label>
-                                    <input type="text" class="event_search" id="email-confirm">
-                                </div>
-                                <div class="reg_password">
-                                    <label for="name">Пароль</label>
-                                    <input type="text" class="event_search" id="password">
-                                    <label for="surname">Подтверждение пароля</label>
-                                    <input type="text" class="event_search" id="password-confirm">
-                                </div>
-                                <div class="reg_captcha">
-            
-                                </div>
-                                <button class="bttn bttn-green">Зарегистрироваться</button>
                             </div>
+                            
+                            <br>
+                            
                         </div>
-                    </div>
             
-                    <div class="row auth_buttons justify-content-center">
-                        <button class="bttn">Поддержка</button>
-                        <button class="bttn">Условия пользования</button>
+                        
+                        
                     </div>
+                    <div class="row justify-content-center">
+                        <a href="#" class="col-auto bttn bttn-green">Создать</a>
+                    </div>
+                    <br>
+                    <br>
                 </div>
             </section>
             
@@ -198,7 +247,8 @@
             </div>
         </footer>
     </div>
-    
+
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

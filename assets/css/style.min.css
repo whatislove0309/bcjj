@@ -21,6 +21,10 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
+a:hover, a:focus, a:visited {
+  outline: none;
+}
+
 /* make sure to set some focus styles for accessibility */
 :focus {
   outline: 0;
@@ -450,7 +454,8 @@ button, button:hover, button:focus {
   background-color: rgba(255, 255, 255, 0.85);
 }
 
-input {
+input,
+textarea {
   width: 100%;
   background-color: #fff;
   border: 1px solid rgba(118, 123, 132, 0.5);
@@ -566,7 +571,7 @@ input {
 }
 
 .panel_row label {
-  width: 40%;
+  min-width: 40%;
   padding-right: 15px;
   font-weight: 600;
   line-height: 1.5;
@@ -1359,6 +1364,10 @@ input {
   background-color: #202838;
 }
 
+.features_detailes .panel_row {
+  justify-content: flex-start;
+}
+
 .features_title {
   font-size: 2rem;
   font-weight: 600;
@@ -1390,10 +1399,8 @@ input {
   position: relative;
 }
 
-.pricing_banner_img {
-  max-width: 64px;
-  width: 100%;
-  height: auto;
+.pricing_banner_item .fa {
+  font-size: 3.75rem;
 }
 
 .pricing_banner_content {
@@ -1527,6 +1534,8 @@ input {
   flex-wrap: wrap;
   transition: all 0.3s linear;
   margin-bottom: 35px;
+  animation-name: authAnim;
+  animation-duration: 0.5s;
 }
 
 .log_form input,
@@ -1577,6 +1586,16 @@ input {
   margin-bottom: 0;
 }
 
+@keyframes authAnim {
+  0% {
+    opacity: 0;
+    transform: rotateY(180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0);
+  }
+}
 .account_switch .fa {
   margin-right: 8px;
 }
