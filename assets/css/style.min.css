@@ -480,7 +480,6 @@ textarea {
 }
 
 .selector {
-  width: 50%;
   height: 48px;
   text-align: center;
   border: 2px solid #fff;
@@ -498,6 +497,17 @@ textarea {
 }
 .selector.active:hover {
   background-color: #fff;
+}
+
+.selector:first-child {
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.selector:last-child {
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  border-left: 1px solid #fff;
 }
 
 .selector a {
@@ -911,12 +921,17 @@ textarea {
 .header_user_li {
   font-size: 0.9rem;
   font-weight: 100;
-  padding: 15px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header_user_li a {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 15px 20px;
+  width: 100%;
+  height: 100%;
 }
 
 .header_user_li:hover {
@@ -1220,17 +1235,6 @@ textarea {
   display: flex;
   justify-content: center;
   margin: 3.1rem 0;
-}
-
-.selector:first-child {
-  border-bottom-left-radius: 5px;
-  border-top-left-radius: 5px;
-}
-
-.selector:last-child {
-  border-bottom-right-radius: 5px;
-  border-top-right-radius: 5px;
-  border-left: 1px solid #fff;
 }
 
 .event_navbar {
@@ -1538,6 +1542,10 @@ textarea {
   animation-duration: 0.5s;
 }
 
+.auth_outer {
+  padding: 0;
+}
+
 .log_form input,
 .reg_form input {
   width: 100%;
@@ -1620,6 +1628,7 @@ textarea {
   justify-content: center;
   align-items: center;
   margin-bottom: 16px;
+  flex-wrap: nowrap;
 }
 
 .profile_name img {
@@ -1647,7 +1656,7 @@ textarea {
 }
 
 .profile_info span {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 300;
   color: #7e818c;
   text-transform: uppercase;
@@ -1715,6 +1724,10 @@ body {
   html {
     font-size: 11px;
   }
+
+  .log_form, .reg_form {
+    padding: 40px;
+  }
 }
 @media (max-device-width: 768px) {
   .info {
@@ -1749,7 +1762,7 @@ body {
     margin-top: 0.5rem;
   }
 
-  .events_buttons button:first-child {
+  .events_buttons .bttn:first-child {
     margin-left: 0;
     margin-right: 0.3rem;
   }
@@ -1768,6 +1781,11 @@ body {
 
   .dark_panel {
     margin-top: 7px;
+  }
+
+  .profile_name h6 {
+    font-size: 2.75rem;
+    padding-left: 0;
   }
 }
 @media (max-device-width: 576px) {
@@ -1789,7 +1807,7 @@ body {
     margin-top: 7px;
   }
 
-  .event_navbar_menu button,
+  .event_navbar_menu .bttn,
 .event_navbar_menu input {
     margin-right: 5px;
   }
@@ -1820,10 +1838,36 @@ body {
   section {
     padding: 24px 0 !important;
     margin-top: 0 !important;
+    margin-bottom: 0 !important;
   }
 
   .main_features_buttons {
     margin: 16px 0 0 0;
+  }
+
+  .hero,
+.profile {
+    padding: 64px 0 !important;
+  }
+
+  .selector {
+    margin-bottom: 5px;
+    border-radius: 5px;
+  }
+
+  .auth_selector .selector:first-child {
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .auth_selector .selector:last-child {
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-left: 1px solid #fff;
   }
 }
 @media (max-device-width: 400px) {
@@ -1837,5 +1881,21 @@ body {
 
   .panel_row {
     flex-wrap: wrap;
+  }
+
+  .auth_selector .selector {
+    height: 30px;
+  }
+
+  .auth_selector {
+    padding-bottom: 0 !important;
+  }
+
+  .profile_name h6 {
+    font-size: 2rem;
+  }
+
+  .profile_info span {
+    font-size: 1rem;
   }
 }
