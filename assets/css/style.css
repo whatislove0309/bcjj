@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600&display=swap");
 
 html, body, div, span, applet, object, iframe,
@@ -478,6 +480,9 @@ textarea {
     justify-content: center;
     -ms-flex-align: center;
     align-items: center;
+    white-space: pre-wrap;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .selector {
@@ -1861,7 +1866,7 @@ textarea {
 
 .event_intro {
     margin-top: 32px;
-    padding-bottom: 64px;
+    padding-bottom: 32px;
 }
 
 .event_intro > .container > .row {
@@ -2006,6 +2011,114 @@ textarea {
     display: none;
 }
 
+.brackets_overview {
+    padding: 64px 0;
+    background-color: #202838;
+}
+
+.brackets_message {
+    margin-top: 30px !important;
+    width: 100%;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #c9eafa;
+    padding: 1rem;
+    border-radius: 7px;
+    color: #093c55;
+}
+
+.brackets_message .fa {
+    font-size: 1.1rem;
+    margin-right: 10px;
+}
+
+.brackets_message strong {
+    font-weight: 600;
+}
+
+.brackets_list > div {
+    padding: 8px;
+}
+
+.brackets_list .panel_header {
+    padding: 10px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.panel_title {
+    font-size: 1.25rem;
+}
+
+.brackets_list .panel_header .bttn {
+    padding: 0.5rem 0.7rem;
+}
+
+.brackets_list .panel_row {
+    padding: 10px;
+    font-size: 0.7rem;
+    line-height: 1rem;
+}
+
+.panel_body_header {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    font-size: 10px;
+    line-height: 10px;
+    color: #a5a5a5;
+}
+
+.panel_body_header i:first-child {
+    margin-right: 5px;
+}
+
+.panel_brackets_row {
+    position: relative;
+}
+
+.panel_brackets_row > div {
+    width: 80%;
+    text-transform: uppercase;
+}
+
+.panel_brackets_row span {
+    opacity: 0.4;
+    width: 20%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.panel_brackets_row::before,
+.panel_brackets_row::afterцф {
+    position: absolute;
+    content: "";
+    z-index: 1;
+    width: 2px;
+    height: 50%;
+    right: 0;
+}
+
+.panel_brackets_row::before {
+    background-color: #fff;
+    top: 0;
+}
+
+.panel_brackets_row::after {
+    background-color: yellow;
+    bottom: 0;
+}
+
 html {
     font-size: 16px;
 }
@@ -2020,6 +2133,12 @@ body {
 .container {
     max-width: 1200px;
     padding: 0 30px;
+    overflow: hidden;
+}
+
+.row {
+    max-width: 100%;
+    margin: auto;
 }
 
 .main {
