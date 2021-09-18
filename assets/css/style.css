@@ -2185,6 +2185,7 @@ textarea {
 .brackets_intro {
     background-color: #202838;
     padding: 0 32px;
+    z-index: 1;
 }
 
 .brackets_title {
@@ -2226,6 +2227,8 @@ textarea {
 
 .brackets {
     padding: 45px 0;
+    background-color: #2c3042;
+    box-shadow: -5px -9px 9px 1px rgba(0, 0, 0, 0.2);
 }
 
 .brackets .container {
@@ -2254,10 +2257,12 @@ textarea {
 }
 
 .brackets_inner {
+    padding-right: 15px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: start;
     justify-content: flex-start;
+    background-color: #2c3042;
 }
 
 .brackets_round {
@@ -2457,10 +2462,6 @@ body {
     max-width: 1200px;
     padding: 0 30px;
     overflow: hidden;
-}
-
-.page {
-    overflow: auto;
 }
 
 .row {
