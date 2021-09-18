@@ -1922,7 +1922,7 @@ textarea {
 }
 
 .event_page {
-    overflow: auto;
+    overflow: unset;
     background-color: #202838;
 }
 
@@ -2457,6 +2457,10 @@ body {
     max-width: 1200px;
     padding: 0 30px;
     overflow: hidden;
+}
+
+.page {
+    overflow: auto;
 }
 
 .row {
