@@ -1760,8 +1760,6 @@ textarea {
     flex-wrap: wrap;
     transition: all 0.3s linear;
     margin-bottom: 35px;
-    -webkit-animation-name: authAnim;
-    animation-name: authAnim;
     -webkit-animation-duration: 0.5s;
     animation-duration: 0.5s;
 }
@@ -1795,12 +1793,6 @@ textarea {
     margin-right: 5px;
 }
 
-.log_form div {
-    margin-bottom: 32px;
-    padding-bottom: 7px;
-    border-bottom: 1px solid #767b84;
-}
-
 .log_form label {
     font-size: 0.8rem;
     color: #767b84;
@@ -1814,12 +1806,88 @@ textarea {
     justify-content: space-between;
     -ms-flex-align: center;
     align-items: center;
+    margin-bottom: 15px;
 }
 
 .reg_name div {
     width: 47%;
     border: none;
     margin-bottom: 0;
+}
+
+.reg_name input {
+    margin-bottom: 5px;
+}
+
+.reg_name label {
+    margin: 0 !important;
+}
+
+.log_form_email,
+.log_form_password {
+    width: 100%;
+}
+
+.log_form_email.danger .auth_input,
+.log_form_password.danger .auth_input {
+    color: red;
+    position: relative;
+}
+
+.reg_form .danger .auth_input::-webkit-input-placeholder, .log_form_email.danger .auth_input::-webkit-input-placeholder, .log_form_password.danger .auth_input::-webkit-input-placeholder {
+    color: #e22b30;
+}
+
+.reg_form .danger .auth_input::-moz-placeholder, .log_form_email.danger .auth_input::-moz-placeholder, .log_form_password.danger .auth_input::-moz-placeholder {
+    color: #e22b30;
+}
+
+.reg_form .danger .auth_input:-ms-input-placeholder, .log_form_email.danger .auth_input:-ms-input-placeholder, .log_form_password.danger .auth_input:-ms-input-placeholder {
+    color: #e22b30;
+}
+
+.reg_form .danger .auth_input::-ms-input-placeholder, .log_form_email.danger .auth_input::-ms-input-placeholder, .log_form_password.danger .auth_input::-ms-input-placeholder {
+    color: #e22b30;
+}
+
+.reg_form .danger .auth_input::placeholder,
+.log_form_email.danger .auth_input::placeholder,
+.log_form_password.danger .auth_input::placeholder {
+    color: #e22b30;
+}
+
+.log_form label,
+.reg_form label {
+    font-size: 12px;
+    margin-right: auto;
+    color: #e22b30;
+    opacity: 0.7;
+    height: 0;
+    opacity: 0;
+    margin: 0;
+    transition: all 0.1s linear;
+}
+
+.log_form_email.danger,
+.log_form_password.danger {
+    margin-bottom: 12px;
+}
+
+.reg_form .danger label {
+    margin-bottom: 15px;
+}
+
+.reg_form .danger input,
+.log_form_email.danger input,
+.log_form_password.danger input {
+    margin-bottom: 3px;
+}
+
+.reg_form .danger label,
+.log_form_email.danger label,
+.log_form_password.danger label {
+    opacity: 1;
+    height: auto;
 }
 
 @-webkit-keyframes authAnim {
