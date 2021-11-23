@@ -1809,6 +1809,11 @@ textarea {
     margin-bottom: 15px;
 }
 
+.reg_email,
+.reg_password {
+    width: 100%;
+}
+
 .reg_name div {
     width: 47%;
     border: none;
@@ -1888,6 +1893,14 @@ textarea {
 .log_form_password.danger label {
     opacity: 1;
     height: auto;
+}
+
+.reg_form span,
+.log_form span {
+    width: 100%;
+    display: block;
+    font-size: 13px;
+    margin: 5px 0;
 }
 
 @-webkit-keyframes authAnim {
