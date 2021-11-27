@@ -148,8 +148,16 @@
                     <div class="row justify-content-center">
                         <div class="col-md-6 auth_outer">
                             <div class="log_form">
-                                <input type="text" class="event_search" placeholder="Email">
-                                <input type="text" class="event_search" placeholder="Пароль">
+                                <div class="log_form_email danger">
+                                    <span>Email</span>
+                                    <input type="text" class="auth_input">
+                                    <label>Wrong email</label>
+                                </div>
+                                <div class="log_form_password danger">
+                                    <span>Password</span>
+                                    <input type="text" class="auth_input">
+                                    <label>Wrong password</label>
+                                </div>
                                 <a href="account.html" class="bttn bttn-blue">Войти</a>
                             </div>
                         </div>

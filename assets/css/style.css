@@ -1131,7 +1131,7 @@ textarea {
 }
 
 .intro {
-    background-image: url(/assets/images/bg.jpg);
+    background-image: url(../../assets/images/bg.jpg);
     background-position: center;
     background-size: cover;
     padding: 8.75rem 0 12.5rem 0;
@@ -1760,8 +1760,6 @@ textarea {
     flex-wrap: wrap;
     transition: all 0.3s linear;
     margin-bottom: 35px;
-    -webkit-animation-name: authAnim;
-    animation-name: authAnim;
     -webkit-animation-duration: 0.5s;
     animation-duration: 0.5s;
 }
@@ -1795,12 +1793,6 @@ textarea {
     margin-right: 5px;
 }
 
-.log_form div {
-    margin-bottom: 32px;
-    padding-bottom: 7px;
-    border-bottom: 1px solid #767b84;
-}
-
 .log_form label {
     font-size: 0.8rem;
     color: #767b84;
@@ -1814,12 +1806,101 @@ textarea {
     justify-content: space-between;
     -ms-flex-align: center;
     align-items: center;
+    margin-bottom: 15px;
+}
+
+.reg_email,
+.reg_password {
+    width: 100%;
 }
 
 .reg_name div {
     width: 47%;
     border: none;
     margin-bottom: 0;
+}
+
+.reg_name input {
+    margin-bottom: 5px;
+}
+
+.reg_name label {
+    margin: 0 !important;
+}
+
+.log_form_email,
+.log_form_password {
+    width: 100%;
+}
+
+.log_form_email.danger .auth_input,
+.log_form_password.danger .auth_input {
+    color: red;
+    position: relative;
+}
+
+.reg_form .danger .auth_input::-webkit-input-placeholder, .log_form_email.danger .auth_input::-webkit-input-placeholder, .log_form_password.danger .auth_input::-webkit-input-placeholder {
+    color: #e22b30;
+}
+
+.reg_form .danger .auth_input::-moz-placeholder, .log_form_email.danger .auth_input::-moz-placeholder, .log_form_password.danger .auth_input::-moz-placeholder {
+    color: #e22b30;
+}
+
+.reg_form .danger .auth_input:-ms-input-placeholder, .log_form_email.danger .auth_input:-ms-input-placeholder, .log_form_password.danger .auth_input:-ms-input-placeholder {
+    color: #e22b30;
+}
+
+.reg_form .danger .auth_input::-ms-input-placeholder, .log_form_email.danger .auth_input::-ms-input-placeholder, .log_form_password.danger .auth_input::-ms-input-placeholder {
+    color: #e22b30;
+}
+
+.reg_form .danger .auth_input::placeholder,
+.log_form_email.danger .auth_input::placeholder,
+.log_form_password.danger .auth_input::placeholder {
+    color: #e22b30;
+}
+
+.log_form label,
+.reg_form label {
+    font-size: 12px;
+    margin-right: auto;
+    color: #e22b30;
+    opacity: 0.7;
+    height: 0;
+    opacity: 0;
+    margin: 0;
+    transition: all 0.1s linear;
+}
+
+.log_form_email.danger,
+.log_form_password.danger {
+    margin-bottom: 12px;
+}
+
+.reg_form .danger label {
+    margin-bottom: 15px;
+}
+
+.reg_form .danger input,
+.log_form_email.danger input,
+.log_form_password.danger input {
+    margin-bottom: 3px;
+}
+
+.reg_form .danger label,
+.log_form_email.danger label,
+.log_form_password.danger label {
+    opacity: 1;
+    height: auto;
+}
+
+.reg_form span,
+.log_form span {
+    width: 100%;
+    display: block;
+    font-size: 13px;
+    margin: 5px 0;
 }
 
 @-webkit-keyframes authAnim {
@@ -1862,7 +1943,7 @@ textarea {
 
 .hero {
     padding: 64px 0;
-    background-image: url(/assets/images/bg.jpg);
+    background-image: url(../../assets/images/bg.jpg);
     background-position: center;
     box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.2);
 }
@@ -1870,7 +1951,7 @@ textarea {
 .profile {
     margin: 128px 0 0 0;
     padding: 64px 0;
-    background-image: url(/assets/images/bg.jpg);
+    background-image: url(../../assets/images/bg.jpg);
     background-position: center;
     background-size: cover;
     box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.2);
@@ -2445,6 +2526,187 @@ textarea {
 
 .brackets_prize.bronze {
     background-color: #c58251;
+}
+
+.members_header {
+    padding: 0 !important;
+}
+
+.members_header_bg {
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+.members_header_bg img {
+    width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+}
+
+.memebers_header_body {
+    padding: 32px 0;
+    background-color: #202838;
+    margin-bottom: 50px;
+}
+
+.memebers_header_content {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    overflow: visible !important;
+}
+
+.members_header_logo {
+    position: relative;
+    min-width: 25%;
+    max-width: 35%;
+}
+
+.members_header_logo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform: translateY(-80%);
+    transform: translateY(-80%);
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 4px solid #fff;
+}
+
+.members_header_title a {
+    font-size: 32px;
+    font-weight: 600;
+    padding-left: 20px;
+}
+
+.members_main {
+    padding: 35px 0;
+    height: 8000px;
+}
+
+.members_container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.members_sidebar {
+    width: 25%;
+}
+
+.members_sidebar_location,
+.members_sidebar_stats {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 12px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.members_sidebar_location i,
+.members_sidebar_stats i {
+    width: 20px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.members_prize {
+    padding: 5px;
+    margin: 0 2px;
+    border-radius: 20%;
+    background-color: #efa10b;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.members_prize.silver {
+    background-color: #8e969a;
+}
+
+.members_prize.bronze {
+    background-color: #c58251;
+}
+
+.members_sidebar_navbar {
+    margin-top: 25px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.members_sidebar_link {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.members_sidebar_link:hover {
+    background-color: #202838;
+}
+
+.members_sidebar_link.active {
+    background-color: #fff;
+    color: #202838;
+}
+
+.members_panel {
+    width: 72%;
+    margin-top: 0;
+}
+
+.members_item {
+    padding: 16px 25px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+.member_avatar img {
+    max-width: 60px;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 1px solid #fff;
+}
+
+.member_content {
+    color: #202838;
+    margin-left: 15px;
+    font-size: 18px;
+}
+
+.member_info img {
+    max-width: 27px;
+    height: auto;
+}
+
+.member_content a {
+    font-size: 14px;
 }
 
 html {
